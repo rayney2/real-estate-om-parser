@@ -1,0 +1,46 @@
+{
+  "PROPERTY INFO": {
+    "Property Name": "Cedar Hill",
+    "Year Built": "1965",
+    "Address": "901-903 Woodson Rd, Baltimore, MD 21212",
+    "Lot Size": "1.23 Acres",
+    "Building Size": "18,500 SF",
+    "Ask Price": "$3,250,000",
+    "Offer Price": null,
+    "Total Apartment Units": "20",
+    "Total Current Rental Units": "20",
+    "Total Parking Spaces": null
+  },
+  "VALUATION & INCOME": {
+    "Price per Unit": "$162,500",
+    "Price per Square Foot": "$175.68",
+    "Cap Rate": "4.31%",
+    "Gross Scheduled Rent": "$250,800",
+    "Effective Gross Income": "$240,912",
+    "Loss to Lease (amount or %)": null,
+    "Vacancy Rate (amount or %)": "5.0%",
+    "Other Income": "$2,652",
+    "Net Operating Income (NOI)": "$140,023"
+  },
+  "EXPENSES": {
+    "Total Expenses": "$100,889",
+    "Management Fee": "$12,046",
+    "Repairs and Maintenance": "$20,000",
+    "Utilities (Water, Electric, Gas)": "$19,026",
+    "Insurance": "$6,540",
+    "Property Taxes": "$26,279",
+    "Trash": "$3,394",
+    "Capital Reserves": null,
+    "Other Expenses": "$13,604"
+  },
+  "RENT ROLL & UNIT MIX": {
+    "Rent Roll": [
+      {
+        "unit type": "2 Bed/1 Bath",
+        "# units": "20",
+        "As-is rent": "$1,045",
+        "Projected rent": "$1,195"
+      }
+    ]
+  }
+}

@@ -11,7 +11,7 @@ def set_api_key_once(api_key: str):
 def init_api_key():
     key = os.getenv("OPENAI_API_KEY")
     if not key:
-        key = input("🔐 Enter your OpenAI API key: ").strip()
+        key = input("Enter your OpenAI API key: ").strip()
         set_api_key_once(key)
         OpenAI.api_key = key
     else:
@@ -80,6 +80,6 @@ def extract_underwriting_json(text):
         )
         return chat.choices[0].message.content
     except RateLimitError as e:
-        print("❌ You have exceeded your current OpenAI quota.")
-        print("👉 Visit https://platform.openai.com/account/usage to check your usage.")
+        print("You have exceeded your current OpenAI quota.")
+        print("Visit https://platform.openai.com/account/usage to check your usage.")
         return "{}"

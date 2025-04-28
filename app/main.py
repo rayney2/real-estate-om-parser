@@ -11,13 +11,13 @@ def main():
     pdf_path = input("📄 Enter path to OM PDF: ").strip()
 
     if not os.path.exists(pdf_path):
-        print(f"❌ File not found: {pdf_path}")
+        print(f"File not found: {pdf_path}")
         return
 
-    print("🔍 Extracting text from PDF...")
+    print("Extracting text from PDF...")
     text = extract_text_smart(pdf_path)
 
-    print("🤖 Sending to GPT-4o...")
+    print("Sending to GPT-4o...")
     raw_response = extract_underwriting_json(text)
 
     try:
@@ -26,7 +26,7 @@ def main():
             data = json.loads(cleaned_response.group(0))
         else:
             raise json.JSONDecodeError("No JSON found", raw_response, 0)
-        print("✅ Underwriting fields extracted:\n")
+        print("Underwriting fields extracted:\n")
         print(json.dumps(data, indent=2))
 
         filename = os.path.basename(pdf_path).replace(".pdf", "_fields")
@@ -42,13 +42,13 @@ def main():
         
         with open(json_path, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2)
-        print(f"\n[📁] JSON saved to: {json_path}")
+        print(f"\nJSON saved to: {json_path}")
 
         
         write_json_to_excel(data, excel_path)
 
     except json.JSONDecodeError:
-        print("⚠️ GPT response was not valid JSON:\n")
+        print("GPT response was not valid JSON:\n")
         print(raw_response)
 
 if __name__ == "__main__":
